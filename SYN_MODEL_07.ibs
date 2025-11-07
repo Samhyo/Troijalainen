@@ -1,0 +1,79 @@
+[IBIS Ver] 7.2
+[File Name] SYN_MODEL_07.ibs
+[File Rev] 1.0
+[Date] 07-NOV-2025
+[Source] Synthetic IBIS models for testing
+[Disclaimer] For educational and testing use only
+[Component] SYN_COMP_07
+[Manufacturer] OpenSim Labs
+[Package]
+R_pkg = 0.527
+L_pkg = 3.66e-09
+C_pkg = 3e-12
+[Pin] signal_name model_name R_pin L_pin C_pin
+1     IO1         SYN_MODEL_07   0.0   0.0   0.0
+2     VCC         POWER          0.0   0.0   0.0
+3     GND         GND            0.0   0.0   0.0
+[Model] SYN_MODEL_07
+Model_type output
+Polarity   Non-Inverting
+Enable     Active-High
+Vinh       0.99
+Vinl       0.45
+Vref       0.9
+C_comp     5.25pF
+| IV tables
+[Pullup]
+|V (V)    I (A)
+-0.900000  -0.001382
+ 0.000000   0.000000
+ 0.900000   0.001382
+ 1.800000   0.002765
+
+[Pulldown]
+|V (V)    I (A)
+-0.900000   0.001382
+ 0.000000  -0.000000
+ 0.900000  -0.001382
+ 1.800000  -0.002765
+
+[GND Clamp]
+|V (V)    I (A)
+-1.800000   0.020000
+-0.200000   0.005000
+ 0.000000   0.000000
+ 0.200000  -0.005000
+ 1.800000  -0.020000
+
+[POWER Clamp]
+|V (V)    I (A)
+-1.800000  -0.020000
+-0.200000  -0.005000
+ 0.000000   0.000000
+ 0.200000   0.005000
+ 1.800000   0.020000
+
+| Dynamic behavior
+[Voltage Time]
+R_fixture 50.0
+V_fixture 1.800
+| Rising Waveform
+|t (s)    V (V)
+ 0.000e+00   0.000000
+ 6.875e-11   0.540000
+ 1.375e-10   1.080000
+ 2.062e-10   1.530000
+ 2.750e-10   1.800000
+
+[Voltage Time]
+R_fixture 50.0
+V_fixture 1.800
+| Falling Waveform
+|t (s)    V (V)
+ 0.000e+00   1.800000
+ 5.947e-11   1.260000
+ 1.189e-10   0.720000
+ 1.784e-10   0.270000
+ 2.379e-10   0.000000
+
+[End]
